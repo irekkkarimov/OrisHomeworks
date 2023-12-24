@@ -1,0 +1,14 @@
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\bin\Debug\net7.0\Homework4.exe
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\bin\Debug\net7.0\Homework4.deps.json
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\bin\Debug\net7.0\Homework4.runtimeconfig.json
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\bin\Debug\net7.0\Homework4.dll
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\bin\Debug\net7.0\Homework4.pdb
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\Homework4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\Homework4.AssemblyInfoInputs.cache
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\Homework4.AssemblyInfo.cs
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\Homework4.csproj.CoreCompileInputs.cache
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\Homework4.dll
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\refint\Homework4.dll
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\Homework4.pdb
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\Homework4.genruntimeconfig.cache
+C:\Users\Booba\Desktop\OrisHomeworks\Homework4\obj\Debug\net7.0\ref\Homework4.dll

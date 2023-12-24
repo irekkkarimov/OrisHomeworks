@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Работа в Додо Пицце</title>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: "Dodo Rounded";
+            src: url("https://db.onlinewebfonts.com/t/9b424ab5e96ee96f675c922ff9c6aff3.eot");
+            src: url("https://db.onlinewebfonts.com/t/9b424ab5e96ee96f675c922ff9c6aff3.eot?#iefix") format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/9b424ab5e96ee96f675c922ff9c6aff3.woff2") format("woff2"),
+            url("https://db.onlinewebfonts.com/t/9b424ab5e96ee96f675c922ff9c6aff3.woff") format("woff"),
+            url("https://db.onlinewebfonts.com/t/9b424ab5e96ee96f675c922ff9c6aff3.ttf") format("truetype"),
+            url("https://db.onlinewebfonts.com/t/9b424ab5e96ee96f675c922ff9c6aff3.svg#Dodo Rounded") format("svg");
+        }
+
+        * {
+
+        }
+
+        body {
+            font-family: "Dodo Rounded";
+            margin: 0;
+        }
+
+        button {
+            font-family: "Dodo Rounded";
+        }
+
+        #root {
+            display: block;
+            width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img {
+            margin: 0;
+        }
+
+        button {
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 48px 0 24px;
+        }
+
+        .navbar > img {
+            height: 65px;
+        }
+
+        .navbar--logo {
+            margin-left: 110px;
+        }
+
+        .navbar--right {
+            display: flex;
+            margin-right: 125px;
+        }
+
+        .navbar--right > img {
+            height: 60px;
+        }
+
+        .navbar--right > button {
+            height: 55px;
+            width: 230px;
+            margin-right: 30px;
+            background-color: #efe41a;
+            font-size: 22px;
+            line-height: 36px;
+            font-weight: 500;
+            letter-spacing: -.01em;
+            color: #000;
+            border: 0;
+            border-radius: 100px;
+            transition: 0.5s;
+        }
+
+        .navbar--right > button:hover {
+            background-color: #ed771e;
+            transition: 0.5s;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: 110px;
+            margin-right: 220px;
+        }
+
+        .hero--left {
+            width: 600px
+        }
+
+        .hero--left > p {
+            margin-top: 70px;
+            margin-left: 0;
+            margin-bottom: 20.34px;
+            font-size: 80px;
+            text-shadow: 1px 1px #000;
+        }
+
+        .hero--right {
+            width: 420px;
+        }
+
+        .hero--right > p {
+            padding-right: 0;
+            max-width: unset;
+            margin-top: 64px;
+            font-size: 22px;
+            line-height: 36px;
+            font-weight: 400;
+            color: #000;
+        }
+
+        .slideshow {
+            display: flex;
+            margin-left: 110px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+            margin-left: 0;
+        }
+
+        .slideshow > p {
+            margin: 30px 200px 30px 100px;
+            padding-right: 200px;
+            font-size: 45px;
+            font-weight: bold;
+            line-height: 40px;
+            letter-spacing: -.8px;
+            transform: rotate(-2.5deg);
+        }
+
+        .slideshow--preview {
+            width: 1200px;
+        }
+
+        .slideshow--pic {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .slideshow--pic > img {
+            align-self: center;
+            border-radius: 100px;
+        }
+
+        .slideshow--pic--leftarrow {
+            width: 80px;
+            margin-right: 50px;
+            transform: rotate(90deg);
+        }
+
+        .slideshow--pic--rightarrow {
+            width: 80px;
+            margin-left: 50px;
+            transform: rotate(270deg);
+        }
+
+        .stories {
+            margin-top: 150px;
+            margin-left: 110px;
+        }
+
+        .stories--heading {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            color: #000;
+        }
+
+        .stories--message {
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .card {
+            position: relative;
+            margin-right: 5px;
+        }
+
+        .card > img {
+            width: 215px;
+            height: 275px;
+            border-radius: 50px;
+        }
+
+        .card--title {
+            position: absolute;
+            margin-top: -50px;
+            margin-left: 20px;;
+            padding-left: 5px;
+            padding-right: 5px;
+            background-color: yellow;
+            border-radius: 100px;
+
+        }
+
+        .card--title > p {
+            margin: 0;
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+        }
+
+        .advantages {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            margin-left: 110px;
+        }
+
+        .advantages--text {
+            width: 730px;
+        }
+
+        .advantages--heading {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            color: #000;
+        }
+
+        .advantages--message {
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+        }
+
+        .advantages--icons {
+            margin-right: 120px;
+        }
+
+        .advantages--icons--row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .advantages--icon--item {
+            width: 160px;
+            margin-left: 45px;
+            margin-bottom: 40px;
+        }
+
+        .advantages--icon--item > img {
+            width: 50px;
+        }
+
+        .advantages--icon--item > p {
+            margin: 0;
+            margin-top: 5px;
+            font-size: 32px;
+        }
+
+        .advantages--icon--item span {
+            display: inline;
+            background-color: #ede209;
+        }
+
+        .top--span {
+            padding: 7px 7px 5px 7px;
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+
+        .bottom--span {
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            padding: 2px 7px 7px 7px;
+        }
+
+        .details {
+            margin-left: 110px;
+        }
+
+        .details--heading {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            color: #000;
+        }
+
+        .details--message {
+            width: 710px;
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+        }
+
+        .details--cards {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .details--cards--item {
+            width: 345px;
+            height: 600px;
+            background-color: #C5A6CF;
+            margin-right: 30px;
+            padding: 30px;
+            border-radius: 50px;
+        }
+
+        .details--cards--item > img {
+            width: 80px;
+        }
+
+        .details--cards--item--heading {
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 40px;
+            color: #000;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .details--cards--item--message {
+            font-size: 22px;
+            line-height: 30px;
+            color: #000;
+            margin-top: 15px;
+        }
+
+        .div--form {
+            margin-top: 150px;
+            margin-right: 120px;
+            margin-left: 110px;
+        }
+
+        .div--form--div {
+            display: flex;
+        }
+
+        .form--heading {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            color: #000;
+        }
+
+        .form--left {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .form--right {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .form--city, .form--region, .form--profession {
+            font-size: 22px;
+            line-height: 30px;
+            padding: 15px 0 15px 30px;
+            border: 1px solid rgb(211, 207, 207);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+
+        optgroup {
+            font-size: 22px;
+        }
+
+        .form--right--row {
+            display: flex;
+        }
+
+        .form--name, .form--lastname, .form--url {
+            font-size: 22px;
+            line-height: 30px;
+            padding: 15px 0 15px 30px;
+            border: 1px solid rgb(211, 207, 207);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+
+        .form--url {
+            margin-bottom: 0;
+        }
+
+        .form--date--div {
+            width: 50%;
+        }
+
+        .form--date, .form--number {
+            font-size: 22px;
+            line-height: 30px;
+            padding: 10px 0 10px 30px;
+            border: 1px solid rgb(211, 207, 207);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+
+        .form--date {
+            width: 83%;
+        }
+
+        .form--number--div {
+            width: 50%;
+        }
+
+        .form--number {
+            width: 86%;
+        }
+
+        .form--right--hint {
+            color: grey;
+            font-size: 20px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+
+        .form--checkbox--label {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            margin-top: 70px;
+        }
+
+        .form--checkbox--label > p {
+            margin-left: 5px;
+        }
+
+        .form--checkbox--label > p > a {
+            text-decoration: none;
+            color: #ed771e
+        }
+
+        input.form--checkbox {
+            width: 20px;
+            height: 20px;
+            background-color: #d6c5b3;
+            border: 0;
+            outline: none;
+        }
+
+        .form--submit {
+            width: 62%;
+            background-color: #ed771e;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 30px;
+            border: 0;
+            border-radius: 100px;
+            padding: 15px;
+            transition: 0.5s;
+        }
+
+        .form--submit:hover {
+            background-color: #efe41a;
+            transition: 0.5s;
+        }
+
+        .questions {
+            display: flex;
+            vertical-align: top;
+            margin-top: 150px;
+            margin-right: 120px;
+            margin-left: 110px;
+        }
+
+        .questions--left {
+            width: 700px;
+        }
+
+        .questions--right {
+            display: flex;
+            flex-direction: column;
+            margin-left: 100px;
+        }
+
+        .questions--heading {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            color: #000;
+            margin: 0;
+        }
+
+        .questions--message {
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+        }
+
+        .questions--mailto {
+            text-decoration: none;
+            color: #ed771e;
+        }
+
+        .questions--right--choose > button {
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 40px;
+            color: #000;
+            border: none;
+            background-color: inherit;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+        .questions--right {
+            width: 100%;
+
+        }
+
+        .questions--right--slider {
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+            background-color: #f8f8f8;
+            border: 0;
+            border-radius: 30px;
+            padding: 30px 0 30px 30px;
+            margin-bottom: 15px;
+            transition: 0.5s;
+        }
+
+        .slider--upper {
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+            background-color: #f8f8f8;
+            border: 0;
+            margin-bottom: 15px;
+            transition: 0.5s;
+        }
+
+        .slider--upper > img {
+            align-self: start;
+            transform: rotate(180deg);
+        }
+
+        .questions--right--slider:hover {
+            background-color: #e2e2e2;
+            transition: 0.5s;
+        }
+
+        .slider--upper {
+            background-color: transparent;
+        }
+
+        .slider--upper > p {
+            margin: 0;
+        }
+
+        .slider--lower {
+            width: 90%;
+        }
+
+        .slider--lower > p {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        .slider--upper > img {
+            align-self: start;
+            margin-right: 30px;
+        }
+
+
+        .footer {
+            margin-top: 100px;
+            margin-right: 120px;
+            margin-left: 110px;
+        }
+
+        .footer--information {
+            display: flex;
+            margin-bottom: 80px;
+        }
+
+        .footer--blog, .footer--looking, .footer--partners, .footer--interesting {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            line-height: 20px;
+            margin-right: 80px;
+        }
+
+        .footer--blog > p, .footer--looking > p, .footer--partners > p, .footer--interesting > p {
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .footer--blog > a, .footer--looking > a, .footer--partners > a, .footer--interesting > a {
+            text-decoration: none;
+            color: rgb(143, 142, 142);
+            margin-bottom: 10px;
+        }
+
+        .footer-download {
+            display: flex;
+            align-content: end;
+        }
+
+        .download--googleplay, .download--appstore {
+            height: 38px;
+            align-self: start;
+            margin-left: 20px;
+        }
+
+        .footer--social {
+            display: flex;
+        }
+
+        .footer--social > a {
+            display: flex;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 20px;
+            color: rgb(143, 142, 142);
+            margin-right: 30px;
+        }
+
+        .footer--social > a > img {
+
+            margin-right: 5px;
+        }
+
+        hr {
+            height: 1px;
+            margin-top: 3px;
+            background-color: rgb(211, 207, 207);
+            border: none;
+        }
+
+        .footer--license {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 26px;
+        }
+
+        .footer--license--left {
+            display: flex;
+        }
+
+        .footer--license--left > img {
+            height: 13px;
+            align-self: start;
+            margin-top: 4px;
+            margin-right: 15px;
+        }
+
+        .footer--license--left > p {
+            align-self: start;
+            color: rgb(143, 142, 142);
+            margin-top: 0;
+            margin-right: 15px;
+            padding-top: 0;
+        }
+
+        .footer--license--left > a {
+            align-self: start;
+            text-decoration: none;
+            color: rgb(143, 142, 142);
+            margin-right: 15px;
+        }
+
+        .footer--license--right > a {
+            align-self: start;
+            text-decoration: none;
+            color: rgb(143, 142, 142);
+        }
+
+        .footer--address {
+            margin: 15px 0 0 0;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, .3);
+        }
+
+        .footer--address > p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+    <div class="navbar">
+        <img src="/images/logo.png" class="navbar--logo">
+        <div class="navbar--right">
+            <button>Заполнить анкету</button>
+            <img src="/images/logo_2.png">
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero--left">
+            <p>Для нас важен каждый</p>
+            <img src="/images/slogan_1784115660.svg"/>
+        </div>
+        <div class="hero--right">
+            <p>Людям нравится работать, когда они чувствуют свою ценность. В большой компании человек может теряться,
+                чувствовать себя менее значимым.</p>
+            <p>Мы в Додо уверены: чем больше компания, тем больше внимания должно быть к тем, кто с ней работает.</p>
+        </div>
+    </div>
+    <div class="slideshow">
+        <p>5 личных видео-историй о Додо изнутри</p>
+        <div class="slideshow--pic">
+            <img src="/images/slideshow_arrow.png" class="slideshow--pic--leftarrow"/>
+            <img src="/images/dodo_slideshow_screenshot.png" class="slideshow--preview"/>
+            <img src="/images/slideshow_arrow.png" class="slideshow--pic--rightarrow"/>
+        </div>
+    </div>
+    <div class="stories">
+        <p class="stories--heading">Кем можно быть в пиццерии</p>
+        <p class="stories--message">Ищем тех, кто хочет присоединиться к нам с удовольствием каждый день.
+            Присоединяйтесь!</p>
+        <div class="cards">
+            <div class="card">
+                <img src="/images/pos3_dac3f8e2ff.png"/>
+                <div class="card--title"><p>Кассир</p></div>
+            </div>
+            <div class="card">
+                <img src="/images/pos4_305a98c676.png"/>
+                <div class="card--title"><p>Пиццамейкер</p></div>
+            </div>
+            <div class="card">
+                <img src="/images/pos2_5fa68f4d3e.png"/>
+                <div class="card--title"><p>Клинер</p></div>
+            </div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+    <div class="advantages">
+        <div class="advantages--text">
+            <p class="advantages--heading">Почему людям нравится работать в Додо?</p>
+            <p class="advantages--message">Додо Пицца — международная сеть пиццерий родом из Сыктывкара. Мы уже открыли
+                более 800 пиццерий в 17 странах и продолжаем открывать новые.</p>
+            <p class="advantages--message">Обычно люди приходят в Додо, чтобы просто поесть или отдохнуть. Именно
+                команда пиццерии делает их опыт незабываемым: создает атмосферу уюта, готовит и доставляет ароматную
+                пиццу.</p>
+            <p class="advantages--message">Чтобы команда дарила радость сотням клиентов, мы уделяем внимание ее
+                комфорту.</p>
+        </div>
+        <div class="advantages--icons">
+            <div class="advantages--icons--row">
+                <div class="advantages--icon--item">
+                    <img src="/images/like1_f2e04214ac.png"/>
+                    <p>
+                        <span class="top--span">Гибкий</span><br>
+                        <span class="bottom--span">график</span>
+                    </p>
+                </div>
+                <div class="advantages--icon--item">
+                    <img src="/images/like2_f8932643ba.png"/>
+                    <p>
+                        <span class="top--span">Старт без</span><br>
+                        <span class="bottom--span">опыта</span>
+                    </p>
+                </div>
+            </div>
+            <div class="advantages--icons--row">
+                <div class="advantages--icon--item">
+                    <img src="/images/like3_3aff907dbf.png"/>
+                    <p>
+                        <span class="top--span">Рядом с</span><br>
+                        <span class="bottom--span">домом</span>
+                    </p>
+                </div>
+                <div class="advantages--icon--item">
+                    <img src="/images/like4_119128e92f.png"/>
+                    <p>
+                        <span class="top--span">Быстрый</span><br>
+                        <span class="bottom--span">рост</span>
+                    </p>
+                </div>
+            </div>
+            <div class="advantages--icons--row">
+                <div class="advantages--icon--item">
+                    <img src="/images/like5_b734e34ece.png"/>
+                    <p>
+                        <span class="top--span">Отсутствие</span><br>
+                        <span class="bottom--span">штрафов</span>
+                    </p>
+                </div>
+                <div class="advantages--icon--item">
+                    <img src="/images/like6_762bbc69bd.png"/>
+                    <p>
+                        <span class="top--span">Стабильная</span><br>
+                        <span class="bottom--span">оплата</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <p class="details--heading">
+            Забота о каждом
+        </p>
+        <p class="details--message">
+            Для удовольствия от работы людям мало лишь оплаты и удобного<br> графика. Заботу о каждом мы проявляем через
+            уважение, открытость<br> и развитие тех, кто этого хочет.
+        </p>
+        <div class="details--cards">
+            <div class="details--cards--item">
+                <img src="/images/thumb_up_2x_9db44b36eb.png" style="background-color: #C5A6CF;"/>
+                <p class="details--cards--item--heading">Уважение — основа<br> работы в команде</p>
+                <p class="details--cards--item--message">Общаться уважительно —<br> такая же норма, как готовить<br>
+                    пиццу по рецепту. И так же важно. </p>
+                <p class="details--cards--item--message">
+                    Каждый в команде знает, что для<br> хороших отношений нет разницы<br> в национальности, опыте работы<br>
+                    или цвете волос. Мы ценим друг<br> друга и вклад каждого в общее дело.</p>
+            </div>
+            <div class="details--cards--item" style="background-color: #ED771E;">
+                <img src="/images/message_2x_a19d7f1375.png"/>
+                <p class="details--cards--item--heading">Открытость<br> во всем</p>
+                <p class="details--cards--item--message">В Додо делятся опытом,<br> признаются в ошибках и всегда<br>
+                    готовы услышать, что можно<br> улучшить. </p>
+                <p class="details--cards--item--message">
+                    Раз в месяц собираем мнения<br> команды о том, что нравится, а что<br> нет. И отвечаем на все<br>
+                    комментарии. Можно не бояться<br> говорить о неудобстве —<br> мы прислушаемся, чтобы сделать<br>
+                    условия комфортней.</p>
+            </div>
+            <div class="details--cards--item" style="background-color: #EFE41A;">
+                <img src="/images/details_arrow.png"/>
+                <p class="details--cards--item--heading">Развитие для тех,<br> кто этого хочет</p>
+                <p class="details--cards--item--message">Из тех, кто пришел ненадолго,<br> многие остаются. У каждого
+                    есть<br> возможность расти — например,<br> стать менеджером и управлять<br> командой. Мы обучаем
+                    этому<br> прямо в пиццерии. </p>
+                <p class="details--cards--item--message">
+                    А если карьерного роста<br> не хочется, можно продолжать<br> работать на любимой должности<br> и
+                    стабильно зарабатывать.</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="div--form">
+        <p class="form--heading">Заполните анкету</p>
+        <form method="POST" action="/authorize/sendToEmail">
+            <div class="div--form--div">
+                <div class="form--left">
+                    <input name="city" class="form--city" type="text" list="cities" placeholder="Город" required>
+                    <datalist id="cities">
+                        <option>Казань</option>
+                    </datalist>
+                    <input name="address" class="form--region" type="text" list="regions" placeholder="Адрес" required>
+                    <datalist id="regions">
+                        <option>Приволжский район</option>
+                    </datalist>
+                    <select name="profession" class="form--profession" required>
+                        <optgroup>
+                            <option>Повар</option>
+                            <option>Кассир</option>
+                            <option>Администратор</option>
+                        </optgroup>
+                    </select>
+                    <label for="form--checkbox" class="form--checkbox--label">
+                        <input id="form--checkbox" class="form--checkbox" type="checkbox" required>
+                        <p>Согласен на <a href="www.google.com">обработку персональных данных</a></p>
+                    </label>
+                    <button class="form--submit" type="submit">Отправить</button>
+                </div>
+                <div class="form--right">
+                    <input name="name" class="form--name" type="text" placeholder="Имя" required>
+                    <input name="lastname" class="form--lastname" type="text" placeholder="Фамилия" required>
+                    <div class="form--right--row">
+                        <div class="form--date--div">
+                            <input class="form--date" type="text" name="numberInput" placeholder="День рождения"
+                                   title="День рождения" required>
+                        </div>
+                        <div class="form--number--div">
+                            <input name="phone" class="form--number" type="number" placeholder="Телефон" required>
+                        </div>
+                    </div>
+                    <input name="social" class="form--url" type="email" placeholder="Ссылка на соцсети">
+                    <p class="form--right--hint">По желанию. На случай, если не дозвонимся по телефону</p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="questions">
+        <div class="questions--left">
+            <p class="questions--heading">Остались вопросы?</p>
+            <p class="questions--message">
+                Здесь мы собрали самые популярные.<br>
+                Если не нашли свой вопрос, напишите нам<br> на почту<br>
+                <a href="www.google.com" class="questions--mailto">team@dodobrands.io</a>
+            </p>
+        </div>
+        <div class="questions--right">
+            <div class="questions--right--choose">
+                <button>Курьерам</button>
+                <button>Работникам кухни</button>
+            </div>
+            <div class="questions--right--slider">
+                <div class="slider--upper">
+                    <p>Как составляется график</p>
+                    <img src="/images/slideshow_arrow.png">
+                </div>
+                <div class="slider--lower">
+                    <p>График формируется по согласованию с курьерами на основе данных о загруженности пиццерии.
+                        Расскажите, когда вам удобно доставлять заказы: весь день или несколько часов, утром или вечером
+                        — мы подберем подходящий вариант.</p>
+                </div>
+            </div>
+            <div class="questions--right--slider">
+                <div class="slider--upper">
+                    <p>Из чего складывается вознаграждение</p>
+                    <img src="/images/slideshow_arrow.png">
+                </div>
+                <div class="slider--lower">
+                    <p>Вознаграждение зависит от разных факторов, например: количества доставленных заказов,
+                        километража, часов занятости или ГСМ. У нас есть прозрачная система мотивации, о которой вы
+                        сможете узнать на встрече с управляющим.</p>
+                </div>
+            </div>
+            <div class="questions--right--slider">
+                <div class="slider--upper">
+                    <p>На чем можно доставлять заказы</p>
+                    <img src="/images/slideshow_arrow.png">
+                </div>
+                <div class="slider--lower">
+                    <p>Вы можете доставлять заказы на своем автомобиле или пешком — это зависит от зоны доставки
+                        выбранной пиццерии. В некоторых точках есть собственный транспорт: автомобили, электросамокаты,
+                        электровелосипеды, велосипеды. Узнать точную информацию можно после заполнения анкеты.</p>
+                </div>
+            </div>
+            <div class="questions--right--slider">
+                <div class="slider--upper">
+                    <p>Есть ли штрафы</p>
+                    <img src="/images/slideshow_arrow.png">
+                </div>
+                <div class="slider--lower">
+                    <p>У каждого, кто честно и искренне делает свое дело, должно быть право на ошибку. Поэтому мы никого
+                        не штрафуем, — это противоречит ценностям Додо.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer--information">
+            <div class="footer--blog">
+                <p class="footer--blog--heading">Додо Пицца</p>
+                <a href="#" class="footer--blog--link">О нас</a>
+                <a href="#" class="footer--blog--link">Додо-книга</a>
+                <a href="#" class="footer--blog--link">Блог "Сила ума"</a>
+                <a href="#" class="footer--blog--link">Додо ИС</a>
+            </div>
+            <div class="footer--looking">
+                <p class="footer--looking--heading">Ищем</p>
+                <a href="#" class="footer--looking--link">В пиццерии</a>
+                <a href="#" class="footer--looking--link">В контакт-центр</a>
+            </div>
+            <div class="footer--partners">
+                <p class="footer--partners--heading">Партнерам</p>
+                <a href="#" class="footer--partners--link">Франшиза</a>
+                <a href="#" class="footer--partners--link">Инвестиции</a>
+                <a href="#" class="footer--partners--link">Поставщикам</a>
+                <a href="#" class="footer--partners--link">Предложить помещение</a>
+            </div>
+            <div class="footer--interesting">
+                <p class="footer--interesting--heading">Это интересно</p>
+                <a href="#" class="footer--interesting--link">Почему мы готовим<br> без перчаток?</a>
+                <a href="#" class="footer--interesting--link">Экскурсии и мастер-классы</a>
+                <a href="#" class="footer--interesting--link">Корпоративные заказы</a>
+            </div>
+            <div class="footer-download">
+                <img class="download--googleplay" src="/images/googleplay_271ed894bd.png">
+                <img class="download--appstore" src="/images/appstore_476166ec50.svg">
+            </div>
+        </div>
+        <div class="footer--social">
+            <a href="#" class="footer--social--vk">
+                <img src="/images/vk_g_a505792c5c.svg">
+                <p>Вконтакте</p>
+            </a>
+            <a href="#" class="footer--social--yt">
+                <img src="/images/youtube_g_3930a841c3.svg">
+                <p>Youtube</p>
+            </a>
+        </div>
+        <hr>
+        <div class="footer--license">
+            <div class="footer--license--left">
+                <img src="/images/dodo_pizza_footer.svg">
+                <p>© 2023</p>
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Политика обработки персональных данных</a>
+            </div>
+            <div class="footer--license--right">
+                <a href="#">feedback@dodopizza.com</a>
+            </div>
+        </div>
+        <div class="footer--address">
+            <p>© 2023 ООО «Додо Франчайзинг»</p>
+            <p>ОГРН 1131101001844, ИНН 1101140415 167001,</p>
+            <p>Республика Коми, г. Сыктывкар, Октябрьский проспект, д. 16</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
