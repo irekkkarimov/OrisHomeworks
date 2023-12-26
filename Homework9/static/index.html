@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Editor</title>
+</head>
+<body style="margin: 20px 20px 20px 0">
+    <div>
+        <h2>Add account</h2>
+        <form method="post" action="account/add">
+            <label for="email_add">Почта</label>
+            <input id="email_add" name="email" type="email" required/>
+            <label for="password">Пароль</label>
+            <input id="password" name="password" type="password" required/>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Delete account</h2>
+        <form method="post" action="Account/Delete">
+            <label for="id_delete">Id аккаунта</label>
+            <input id="id_delete" name="id" type="number" required/>
+            <button type="submit">Удалить</button>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Update account by id</h2>
+        <form method="post" action="Account/Update">
+            <label for="id_update">Id аккаунта</label>
+            <input id="id_update" name="id" type="number" required/>
+            <label for="email_update">Новая почта</label>
+            <input id="email_update" name="email" type="email" required/>
+            <label for="password_update">Новый пароль</label>
+            <input id="password_update" name="password" type="password" required/>
+            <button type="submit">Обновить</button>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Получить все аккаунты</h2>
+        <button onclick="location.href = 'Account/GetAll'">Получить все аккаунты</button>
+    </div>
+    <hr>
+    <div>
+        <h2>Получение аккаунта по id</h2>
+        <h3>В моем контроллер хэндлере Get методы могут принимать только параметры типа getAction/{id}, поэтому можно написать только самому</h3>
+        <h3>Или вот кнопки чтобы посмотреть 1, 2 и 3 id</h3>
+        <button onclick="location.href = 'Account/GetById/1'">Получить аккаунт по id 1</button>
+        <button onclick="location.href = 'Account/GetById/2'">Получить аккаунт по id 2</button>
+        <button onclick="location.href = 'Account/GetById/3'">Получить аккаунт по id 3</button>
+    </div>
+</body>
+</html>

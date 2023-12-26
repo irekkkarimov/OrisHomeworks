@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qnDNZOMxFm9cP2xXZAMG0zMTSQ8qDlqg0DT8zXxQR9K2ncle87fPpNsTDb5vY/qaOJ53uBPfdh6RTk/rzTws7g==",
+  "dgSpecHash": "9sKxAqzMKV1cz6x94eGD3QBoQTvxXLA/+ESyE8l6Z7M8CobZVY2JTmM4nTroqkMuA6xEJ0Vtr+l5qaSHibQk6w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Booba\\Desktop\\OrisHomeworks\\Homework9\\Homework9.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Booba\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-rc.2.23479.6\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\Booba\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0-rc.2.23479.6\\microsoft.extensions.logging.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\Booba\\.nuget\\packages\\npgsql\\8.0.0-rc.2\\npgsql.8.0.0-rc.2.nupkg.sha512"
+  ],
   "logs": []
 }
